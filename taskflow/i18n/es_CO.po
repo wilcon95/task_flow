@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* taskflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-14 00:17+0000\n"
+"PO-Revision-Date: 2024-08-13 19:18-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_CO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: taskflow
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: taskflow
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_form
+msgid "Cancel Task"
+msgstr "Cancelar tarea"
+
+#. module: taskflow
+#: model:ir.model.fields.selection,name:taskflow.selection__taskflow_task__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: taskflow
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_form
+msgid "Complete Task"
+msgstr "Tarea Completa"
+
+#. module: taskflow
+#: model:ir.model.fields.selection,name:taskflow.selection__taskflow_task__state__completed
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_form
+msgid "Completed"
+msgstr "Completado"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: taskflow
+#: model:ir.model.fields.selection,name:taskflow.selection__taskflow_task__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__end_date
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: taskflow
+#. odoo-python
+#: code:addons/taskflow/models/task.py:0
+#, python-format
+msgid "End date must be greater than start date"
+msgstr "La fecha final debe ser mayor que la fecha inicial"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__id
+msgid "ID"
+msgstr "Id"
+
+#. module: taskflow
+#: model:ir.model.fields.selection,name:taskflow.selection__taskflow_task__state__progress
+msgid "In Progress"
+msgstr "En progreso"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__write_date
+msgid "Last Updated on"
+msgstr "Última actualización"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__state
+msgid "State"
+msgstr "Estado"
+
+#. module: taskflow
+#: model:ir.model,name:taskflow.model_taskflow_task
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_form
+msgid "Task"
+msgstr "Tarea"
+
+#. module: taskflow
+#: model:ir.model.fields,field_description:taskflow.field_taskflow_task__name
+msgid "Task Name"
+msgstr "Nombre de la tarea"
+
+#. module: taskflow
+#: model:ir.ui.menu,name:taskflow.task_menu_root
+msgid "Taskflow"
+msgstr "Flujo de tareas"
+
+#. module: taskflow
+#: model:ir.actions.act_window,name:taskflow.taskflow_task_action
+#: model:ir.ui.menu,name:taskflow.task_menu
+#: model_terms:ir.ui.view,arch_db:taskflow.taskflow_task_view_tree
+msgid "Tasks"
+msgstr "Tareas"

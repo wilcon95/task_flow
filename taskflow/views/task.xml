@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- TREE VIEW -->
+
+    <record id="taskflow_task_view_tree" model="ir.ui.view">
+        <field name="name">taskflow.task.view.tree</field>
+        <field name="model">taskflow.task</field>
+        <field name="arch" type="xml">
+            <tree string="Tasks">
+                <field name="name" />
+                <field name="description" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="state" widget="badge" decoration-success="state == 'completed'" decoration-danger="state == 'cancel'" decoration-info="state == 'draft'"/>
+            </tree>
+        </field>
+    </record>
+
+<!-- FORM VIEW -->
+
+    <record id="taskflow_task_view_form" model="ir.ui.view">
+        <field name="name">taskflow.task.view.form</field>
+        <field name="model">taskflow.task</field>
+        <field name="arch" type="xml">
+            <form string="Task">
+                <header>
+                    <field name="state" widget="statusbar" />
+                    <button string='Complete Task' name="action_complete" type="object" class="btn-primary" invisible="state != 'progress'"/>
+                    <button string='Cancel Task' name="action_cancel" type="object" class="btn" invisible="state != 'progress'"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Completed" bg_color="text-bg-success" invisible="state != 'completed'"/>
+                    <widget name="web_ribbon" title="Cancel" bg_color="text-bg-danger" invisible="state != 'cancel'"/>
+                    <div class="oe_title">
+                        <h1 class="d-flex">
+                            <field name="name" invisible="state == 'draft'"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="description" readonly="state != 'draft'"/>
+                        <field name="start_date" readonly="state != 'draft'"/>
+                        <field name="end_date" readonly="state != 'draft'" />
+                        <field name="duration" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+<!-- ACTION -->
+
+    <record id="taskflow_task_action" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">taskflow.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<!-- MENUS -->
+
+    <menuitem
+        id="task_menu_root"
+        name="Taskflow"
+        action="taskflow_task_action"
+        sequence="10"/>
+
+    <menuitem
+        id="task_menu"
+        name="Tasks"
+        action="taskflow_task_action"
+        parent="task_menu_root"
+        sequence="10"/>
+</odoo>
